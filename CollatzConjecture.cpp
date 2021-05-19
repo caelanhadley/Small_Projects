@@ -1,3 +1,10 @@
+/*
+Using the Collatz Conjecture this program algorithmically
+determines the number of steps nessicary for n = 1. Written
+by Caelan Hadley.
+
+© 2021 Caelan Hadley.
+*/
 #include <iostream>
 
 int main() {
