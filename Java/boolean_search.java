@@ -18,6 +18,8 @@ public class boolean_search {
         println("How many lists?");
         int num_of_lists = scan.nextInt();
 
+        println("\n\n\n");
+
         // Generate Random number to search for in the list
         search_for_values = generate_search_data(num_of_lists);
 
@@ -40,6 +42,8 @@ public class boolean_search {
 
             data_process_time(0, end_time - start_time);
         }
+
+        println(">>>> RESULTS <<<<\n");
         print("Average Brute Search Time: ");
         print(data_process_average_time(time_identity, time_value, 0) * 1e-6);
         println(" ms");
@@ -70,8 +74,9 @@ public class boolean_search {
         println(" ms");
 
         println("");
-        println(">>>> Clearing Values <<<<");
-        println("");
+        println(">>>> Clearing Values <<<<\n");
+        println(">>>> WORST CASE RESULTS <<<<\n");
+
         // Clears time table data
         time_identity.clear();
         time_value.clear();
@@ -117,6 +122,7 @@ public class boolean_search {
         print("Worst Time in set Worst case Short: ");
         print(data_process_long_worstTime(data_get_times_by_id(time_identity, time_value, 1)) * 1e-6);
         println(" ms");
+        println("");
 
         // Close Scanner Object
         scan.close();
