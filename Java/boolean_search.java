@@ -73,56 +73,45 @@ public class boolean_search {
         print(data_process_long_worstTime(data_get_times_by_id(time_identity, time_value, 1)) * 1e-6);
         println(" ms");
 
-        println("");
-        println(">>>> Clearing Values <<<<\n");
-        println(">>>> WORST CASE RESULTS <<<<\n");
-
-        // Clears time table data
-        time_identity.clear();
-        time_value.clear();
-
-        // Worst Case for Brute Force Search
-        for (int i = 0; i < num_of_lists; i++) {
-            ArrayList<Integer> testList = list_of_lists.get(i);
-            long start_time = 0;
-            long end_time = 0;
-
-            start_time = System.nanoTime();
-            // Note: -1 will never occur in the list, generated values >= 0
-            search_brute(testList, -1);
-            end_time = System.nanoTime();
-
-            data_process_time(0, end_time - start_time);
-        }
-        print("Brute Search Worst Case Time Average: ");
-        print(data_process_average_time(time_identity, time_value, 0) * 1e-6);
-        println(" ms");
-
-        // Worst Case for Short Search
-        for (int i = 0; i < num_of_lists; i++) {
-            ArrayList<Integer> testList = list_of_lists.get(i);
-            long start_time = 0;
-            long end_time = 0;
-
-            start_time = System.nanoTime();
-            // Note: -1 will never occur in the list, generated values >= 0
-            search_short_stop(testList, -1);
-            end_time = System.nanoTime();
-
-            data_process_time(1, end_time - start_time);
-        }
-        print("Short Search Worst Case Time Average: ");
-        print(data_process_average_time(time_identity, time_value, 1) * 1e-6);
-        println(" ms");
-
-        println("");
-        print("Worst Time in set Worst Case Brute: ");
-        print(data_process_long_worstTime(data_get_times_by_id(time_identity, time_value, 0)) * 1e-6);
-        println(" ms");
-        print("Worst Time in set Worst case Short: ");
-        print(data_process_long_worstTime(data_get_times_by_id(time_identity, time_value, 1)) * 1e-6);
-        println(" ms");
-        println("");
+        /*
+         * println(""); println(">>>> Clearing Values <<<<\n");
+         * println(">>>> WORST CASE RESULTS <<<<\n");
+         * 
+         * // Clears time table data time_identity.clear(); time_value.clear();
+         * 
+         * // Worst Case for Brute Force Search for (int i = 0; i < num_of_lists; i++) {
+         * ArrayList<Integer> testList = list_of_lists.get(i); long start_time = 0; long
+         * end_time = 0;
+         * 
+         * start_time = System.nanoTime(); // Note: -1 will never occur in the list,
+         * generated values >= 0 search_brute(testList, -1); end_time =
+         * System.nanoTime();
+         * 
+         * data_process_time(0, end_time - start_time); }
+         * print("Brute Search Worst Case Time Average: ");
+         * print(data_process_average_time(time_identity, time_value, 0) * 1e-6);
+         * println(" ms");
+         * 
+         * // Worst Case for Short Search for (int i = 0; i < num_of_lists; i++) {
+         * ArrayList<Integer> testList = list_of_lists.get(i); long start_time = 0; long
+         * end_time = 0;
+         * 
+         * start_time = System.nanoTime(); // Note: -1 will never occur in the list,
+         * generated values >= 0 search_short_stop(testList, -1); end_time =
+         * System.nanoTime();
+         * 
+         * data_process_time(1, end_time - start_time); }
+         * print("Short Search Worst Case Time Average: ");
+         * print(data_process_average_time(time_identity, time_value, 1) * 1e-6);
+         * println(" ms");
+         * 
+         * println(""); print("Worst Time in set Worst Case Brute: ");
+         * print(data_process_long_worstTime(data_get_times_by_id(time_identity,
+         * time_value, 0)) * 1e-6); println(" ms");
+         * print("Worst Time in set Worst case Short: ");
+         * print(data_process_long_worstTime(data_get_times_by_id(time_identity,
+         * time_value, 1)) * 1e-6); println(" ms"); println("");
+         */
 
         // Close Scanner Object
         scan.close();
