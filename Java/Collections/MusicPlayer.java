@@ -8,4 +8,5 @@ public class MusicPlayer {
     * List --> ArrayList, LinkedList, Vector
     */
     List<Song> playlist = new ArrayList<Song>();
+    
 }
